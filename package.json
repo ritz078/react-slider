@@ -1,9 +1,10 @@
 {
-  "name": "react-component-boilerplate",
-  "description": "A boilerplate to create React components using react-transform-hmr, Babel 6, webpack and SASS",
+  "name": "@filter-components/react-slider",
+  "description": "A fully featured slider component made in React"
   "main": "components/index.js",
   "scripts": {
-    "lint": "eslint components/** test/**",
+    "lint": "eslint components/**/*.js test/**/*.js",
+    "lintfix": "eslint --fix components/**/*.js test/**/*.js",
     "prepublish": "npm run lint",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "storybook": "start-storybook -p 9002",
@@ -12,19 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ritz078/react-component-boilerplate.git"
+    "url": "https://github.com/filter-components/react-slider"
   },
   "keywords": [
-    "react-component-keywords"
+    "react-component",
+    "react-slider",
+    "react-range-slider",
+    "slider"
   ],
   "author": "Ritesh Kumar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ritz078/react-component-boilerplate/issues"
+    "url": "https://github.com/filter-components/react-slider/issues"
   },
-  "homepage": "https://github.com/ritz078/react-component-boilerplate",
+  "homepage": "https://github.com/filter-components/react-slider",
   "devDependencies": {
-    "@kadira/storybook": "^1.38.0",
+    "@kadira/storybook": "^2.35.2",
     "autoprefixer": "^6.3.2",
     "babel": "^6.5.2",
     "babel-core": "^6.10.4",
@@ -65,6 +69,7 @@
     "classnames": "^2.2.3",
     "invariant": "^2.0.0",
     "react": "^15.0.0",
+    "react-addons-shallow-compare": "^15.4.2",
     "react-dom": "^15.0.0"
   },
   "config": {
