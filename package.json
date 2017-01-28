@@ -1,6 +1,6 @@
 {
   "name": "@filter-components/react-slider",
-  "description": "A fully featured slider component made in React"
+  "description": "A fully featured slider component made in React",
   "main": "components/index.js",
   "scripts": {
     "lint": "eslint components/**/*.js test/**/*.js",
