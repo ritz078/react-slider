@@ -20,7 +20,7 @@ npm install --save fc-react-slider
 ### Basic Usage
 
 ```js
-import {Toggle} from 'react-controls';
+import {Slider} from 'fc-react-controls';
 
 export default class X extends React.Component{
  render() {
