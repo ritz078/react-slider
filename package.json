@@ -5,12 +5,12 @@
   "jsnext:main": "components/index.js",
   "module": "components/index.js",
   "scripts": {
-    "lint": "eslint components/**/*.js test/**/*.js",
-    "lintfix": "eslint --fix components/**/*.js test/**/*.js",
+    "lint": "eslint components/**/*.js tests/**/*.js",
+    "lintfix": "eslint --fix components/**/*.js tests/**/*.js",
     "prepublish": "npm run lint && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "storybook": "start-storybook -p 9002",
-    "test": "mocha --require test/config/setup 'tests/**/*.test.js'",
+    "test": "mocha --require tests/config/setup 'tests/**/*.test.js'",
     "test:cover": "istanbul cover -x *.test.js _mocha -- -R spec --require tests/config/setup 'tests/**/*.test.js'",
     "build": "babel components --out-dir dist",
     "docs": "build-storybook -o docs"
@@ -70,6 +70,8 @@
     "webpack-hot-middleware": "^2.7.1"
   },
   "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-react-hmre": "^1.1.1",
     "classnames": "^2.2.3",
     "invariant": "^2.0.0",
     "react": "^15.0.0",
