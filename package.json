@@ -1,5 +1,6 @@
 {
-  "name": "@filter-components/react-slider",
+  "name": "fc-react-slider",
+  "version": "0.1.0",
   "description": "A fully featured slider component made in React",
   "main": "dist/index.js",
   "jsnext:main": "components/index.js",
