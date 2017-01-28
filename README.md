@@ -14,7 +14,7 @@
 
 ### Installation
 ```
-npm install --save @filter-components/react-slider
+npm install --save fc-react-slider
 ```
 
 ### Basic Usage
