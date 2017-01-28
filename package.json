@@ -1,15 +1,19 @@
 {
   "name": "@filter-components/react-slider",
   "description": "A fully featured slider component made in React",
-  "main": "components/index.js",
+  "main": "dist/index.js",
+  "jsnext:main": "components/index.js",
+  "module": "components/index.js",
   "scripts": {
     "lint": "eslint components/**/*.js test/**/*.js",
     "lintfix": "eslint --fix components/**/*.js test/**/*.js",
-    "prepublish": "npm run lint",
+    "prepublish": "npm run lint && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "storybook": "start-storybook -p 9002",
     "test": "mocha --require test/config/setup 'tests/**/*.test.js'",
-    "test:cover": "istanbul cover -x *.test.js _mocha -- -R spec --require tests/config/setup 'tests/**/*.test.js'"
+    "test:cover": "istanbul cover -x *.test.js _mocha -- -R spec --require tests/config/setup 'tests/**/*.test.js'",
+    "build": "babel components --out-dir dist",
+    "docs": "build-storybook -o docs"
   },
   "repository": {
     "type": "git",
@@ -29,6 +33,7 @@
   "homepage": "https://github.com/filter-components/react-slider",
   "devDependencies": {
     "@kadira/storybook": "^2.35.2",
+    "@kadira/storybook-deployer": "^1.0.0",
     "autoprefixer": "^6.3.2",
     "babel": "^6.5.2",
     "babel-core": "^6.10.4",
@@ -65,7 +70,6 @@
     "webpack-hot-middleware": "^2.7.1"
   },
   "dependencies": {
-    "@kadira/storybook-deployer": "^1.0.0",
     "classnames": "^2.2.3",
     "invariant": "^2.0.0",
     "react": "^15.0.0",
